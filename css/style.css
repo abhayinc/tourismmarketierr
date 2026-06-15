@@ -19,8 +19,8 @@
   /* Muted bronze gray */
   --wp--preset--color--border: rgba(28, 25, 23, 0.08);
   /* Fine divider line */
-  --wp--preset--color--primary: #FAF2EE;
-  /* Soft terracotta highlight tint */
+  --wp--preset--color--primary: #F4F1EC;
+  /* Soft neutral sand highlight tint */
   --accent-text-blue: #C85A32;
   /* Premium terracotta orange */
 
@@ -41,8 +41,8 @@
   --wp--preset--color--foreground-2: #A19A91;
   /* Warm dark gray */
   --wp--preset--color--border: rgba(250, 246, 240, 0.08);
-  --wp--preset--color--primary: #1F1411;
-  /* Rich terracotta tint dark */
+  --wp--preset--color--primary: #1A1918;
+  /* Rich neutral dark tint */
   --accent-text-blue: #E2876E;
   /* Soft coral orange Accent */
   --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.4);
@@ -882,7 +882,7 @@ html.lenis body {
 }
 
 .workflow-row.active {
-  background-color: var(--wp--preset--color--primary);
+  background-color: var(--wp--preset--color--background-2);
   border-left-color: var(--accent-text-blue);
   padding-left: 3.5rem; /* Indent slightly when active */
 }
