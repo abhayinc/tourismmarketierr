@@ -1035,10 +1035,11 @@ html.lenis body {
     margin-top: 1rem;
   }
   .workflow-row {
-    padding: 3rem 0 3rem 1.8rem;
+    padding: 3rem 1.8rem;
   }
   .workflow-row.active {
-    padding-left: 2rem;
+    padding-left: 2.2rem;
+    padding-right: 1.4rem;
   }
 }
 
@@ -1056,7 +1057,30 @@ html.lenis body {
     width: 100%;
     text-align: center;
     border: 1px dashed var(--wp--preset--color--border);
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     border-radius: 6px;
+    font-size: 1.55rem;
+  }
+  .row-links {
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 1rem;
+  }
+  .row-links .pill-link {
+    font-size: 1.5rem;
+    width: fit-content;
+  }
+  .row-desc {
+    font-size: 1.6rem;
+    line-height: 1.65;
+  }
+  .row-title {
+    font-size: 2rem;
+  }
+  .sim-console {
+    font-size: 1.5rem;
+  }
+  .bubble-content {
+    font-size: 1.5rem;
   }
 }
