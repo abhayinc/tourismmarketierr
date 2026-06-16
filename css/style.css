@@ -208,10 +208,9 @@ html.lenis body {
    ========================================================================== */
 .workspace-hero {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: 3.2rem;
+  margin-top: 4rem;
 }
 
 .hero-image-wrap {
@@ -236,7 +235,6 @@ html.lenis body {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
 }
 
 .hero-title {
@@ -246,35 +244,44 @@ html.lenis body {
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--wp--preset--color--foreground-1);
+  margin-bottom: 0.6rem;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--wp--preset--color--foreground-2);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin-bottom: 1.6rem;
 }
 
 .hero-bio {
-  font-size: 1.65rem;
+  font-size: 1.6rem;
   color: var(--wp--preset--color--foreground-1);
-  line-height: 1.7;
-  max-width: 620px;
+  line-height: 1.65;
+  margin-bottom: 1.6rem;
+  max-width: 520px;
 }
 
 .hero-meta {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--wp--preset--color--foreground-2);
   line-height: 1.5;
-  margin-top: 0.4rem;
 }
 
 @media (max-width: 576px) {
+  .workspace-hero {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+
   .hero-profile-img {
     width: 80px;
     height: 80px;
   }
+
   .hero-title {
     font-size: 3.2rem;
   }
