@@ -9,7 +9,7 @@
   --font-name: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
   /* Color Palette - Warm Sand & Charcoal */
-  --wp--preset--color--background-1: #FCFAF7;
+  --wp--preset--color--background-1: #FAF4EB;
   /* Light paper cream */
   --wp--preset--color--background-2: #FFFFFF;
   /* Modal / Card clean white */
@@ -17,13 +17,13 @@
   /* Dark charcoal */
   --wp--preset--color--foreground-2: #6E675F;
   /* Muted bronze gray */
-  --wp--preset--color--border: rgba(28, 25, 23, 0.08);
-  /* Fine divider line */
-  --wp--preset--color--primary: #F5F5F4;
-  /* Muted off-white/gray */
-  --accent-text-blue: #1C1917;
-  /* Rich charcoal black monochrome accent */
-  --pulse-glow-color: rgba(28, 25, 23, 0.35);
+  --wp--preset--color--border: rgba(46, 40, 35, 0.08);
+  /* Fine warm divider line */
+  --wp--preset--color--primary: #F3EBE1;
+  /* Muted warm tint */
+  --accent-text-blue: #2E251E;
+  /* Rich warm charcoal accent */
+  --pulse-glow-color: rgba(46, 40, 35, 0.35);
 
   /* Spacings & Layout */
   --content-width: 680px;
