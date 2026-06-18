@@ -448,6 +448,7 @@ html.lenis body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .directory-summary::-webkit-details-marker {
@@ -1097,3 +1098,202 @@ html.lenis body {
     font-size: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   TRAVEL & TOURISM DECORATIVE AMBIENT ELEMENTS
+   Bold, excitement-driven — all pointer-events: none, behind content
+   Structure / fonts / layout / content: UNTOUCHED
+   ========================================================================== */
+
+/* ── 1. Map-paper dot grid on body background ── */
+body {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(181, 98, 42, 0.12) 1.2px,
+    transparent 1.2px
+  );
+  background-size: 30px 30px;
+}
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(212, 136, 74, 0.09) 1.2px,
+    transparent 1.2px
+  );
+  background-size: 30px 30px;
+}
+
+/* ── 2. Giant ghostly airplane — floats behind the hero ── */
+.workspace-hero {
+  position: relative;
+  overflow: visible;
+}
+
+.workspace-hero::before {
+  content: '\2708'; /* ✈ */
+  position: absolute;
+  top: -8rem;
+  right: -14rem;
+  font-size: 22rem;
+  line-height: 1;
+  color: var(--accent-warm);
+  opacity: 0.06;
+  transform: rotate(-18deg);
+  pointer-events: none;
+  z-index: 0;
+  font-family: 'Segoe UI Symbol', 'Apple Color Emoji', system-ui, sans-serif;
+  transition: opacity 0.4s ease;
+}
+
+[data-theme="dark"] .workspace-hero::before {
+  opacity: 0.09;
+}
+
+/* ── 3. Coordinate label — floating beneath hero, right-aligned ── */
+.workspace-hero::after {
+  content: '22\00b0N \00b7 77\00b0E'; /* 22°N · 77°E — Gwalior */
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  font-size: 1.0rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-warm-light);
+  opacity: 0.55;
+  pointer-events: none;
+  font-family: var(--font-body);
+  transition: color 0.4s ease;
+}
+
+/* ── 4. Small ✈ icon before each section h2 title ── */
+.section-h2::before {
+  content: '\2708';
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: var(--accent-warm);
+  opacity: 0.7;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: 'Segoe UI Symbol', 'Apple Color Emoji', system-ui, sans-serif;
+  transform: translateY(-1px);
+}
+
+/* ── 5. Dashed flight-path arc — decorative, upper-left of contact section ── */
+.contact-section {
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: -5.5rem;
+  width: 110px;
+  height: 80px;
+  border-top: 2px dashed var(--accent-warm-light);
+  border-left: 2px dashed var(--accent-warm-light);
+  border-radius: 80% 0 0 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Second arc — layered offset for depth */
+.contact-section::after {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: -3.5rem;
+  width: 70px;
+  height: 50px;
+  border-top: 1.5px dashed var(--accent-warm-light);
+  border-left: 1.5px dashed var(--accent-warm-light);
+  border-radius: 80% 0 0 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* ── 6. Compass-pin dot on the footer border ── */
+.notion-footer {
+  position: relative;
+}
+
+.notion-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  opacity: 0.55;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 3px var(--wp--preset--color--background-1),
+    0 0 0 5px var(--accent-warm-light);
+}
+
+/* ── 7. Diagonal hatching strip — far background, top-left corner ── */
+/* Creates a wide-spaced diagonal rule pattern suggesting a map boundary */
+.notion-footer::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgba(181, 98, 42, 0.04) 18px,
+    rgba(181, 98, 42, 0.04) 19px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] .notion-footer::after {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgba(212, 136, 74, 0.06) 18px,
+    rgba(212, 136, 74, 0.06) 19px
+  );
+}
+
+/* ── 8. Tiny destination-pin markers on the directory list ── */
+/* Each accordion row gets a faint world-map pin marker at its number */
+.directory-summary::before {
+  content: '\25cf'; /* ● filled circle */
+  position: absolute;
+  left: -2.6rem;
+  font-size: 0.65rem;
+  color: var(--accent-warm);
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.directory-list {
+  position: relative;
+}
+
+/* Show pin on hover / open */
+.directory-toggle:hover .directory-summary::before,
+.directory-toggle[open] .directory-summary::before {
+  opacity: 0.55;
+}
+
+/* ── 9. Horizon gradient strip — very bottom of viewport ── */
+/* Warm sun-on-horizon amber glow at the page base */
+body {
+  background-attachment: fixed; /* keeps dot-grid fixed while scrolling — map feel */
+}
+
