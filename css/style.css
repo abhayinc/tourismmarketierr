@@ -8,52 +8,52 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-name: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
-  /* Color Palette — Indigo & Sand */
-  --wp--preset--color--background-1: #F2EFE8;
-  /* Warm ivory sand */
-  --wp--preset--color--background-2: #FBF9F4;
-  /* Clean sand-white card */
-  --wp--preset--color--foreground-1: #1C1840;
-  /* Deep indigo-black */
-  --wp--preset--color--foreground-2: #4C4878;
-  /* Muted indigo slate */
-  --wp--preset--color--border: rgba(60, 55, 120, 0.10);
-  /* Indigo tint border */
-  --wp--preset--color--primary: #E6E4F4;
-  /* Soft lavender chip */
-  --accent-text-blue: #4845A8;
-  /* Rich indigo accent */
-  --accent-warm: #4845A8;
-  --accent-warm-light: #AAA8E0;
-  /* Soft lavender-blue */
-  --pulse-glow-color: rgba(72, 69, 168, 0.25);
+  /* Color Palette — Ink & Paper (pure monochrome) */
+  --wp--preset--color--background-1: #F7F7F5;
+  /* Clean off-white paper */
+  --wp--preset--color--background-2: #FFFFFF;
+  /* Pure white */
+  --wp--preset--color--foreground-1: #0E0E0E;
+  /* Near-black ink */
+  --wp--preset--color--foreground-2: #5C5C5C;
+  /* Mid gray */
+  --wp--preset--color--border: rgba(0, 0, 0, 0.08);
+  /* Subtle ink rule */
+  --wp--preset--color--primary: #EBEBEB;
+  /* Light gray chip */
+  --accent-text-blue: #0E0E0E;
+  /* Black — editorial accent */
+  --accent-warm: #0E0E0E;
+  --accent-warm-light: #C0C0C0;
+  /* Medium gray */
+  --pulse-glow-color: rgba(0, 0, 0, 0.10);
 
   /* Spacings & Layout */
   --content-width: 680px;
   --transition-normal: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.15s ease-in-out;
-  --shadow-box: 0px 48px 80px -16px rgba(30, 25, 80, 0.09);
+  --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.06);
 }
 
 [data-theme="dark"] {
-  --wp--preset--color--background-1: #0C0B1A;
-  /* Deep indigo night — rich, immersive */
-  --wp--preset--color--background-2: #141228;
-  /* Dark indigo card surface */
-  --wp--preset--color--foreground-1: #EAE8F8;
-  /* Cool lavender-white */
-  --wp--preset--color--foreground-2: #7875B0;
-  /* Muted medium indigo */
-  --wp--preset--color--border: rgba(120, 115, 200, 0.10);
-  --wp--preset--color--primary: #131128;
-  /* Dark indigo chip */
-  --accent-text-blue: #8C8ADA;
-  /* Bright soft indigo — glows on dark */
-  --accent-warm: #8C8ADA;
-  --accent-warm-light: #1E1B48;
-  /* Dark indigo chip */
-  --pulse-glow-color: rgba(140, 138, 218, 0.30);
-  --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.60);
+  --wp--preset--color--background-1: #0C0C0C;
+  /* Pure dark — deep ink */
+  --wp--preset--color--background-2: #161616;
+  /* Card surface */
+  --wp--preset--color--foreground-1: #F0F0F0;
+  /* Near-white */
+  --wp--preset--color--foreground-2: #888888;
+  /* Mid gray */
+  --wp--preset--color--border: rgba(255, 255, 255, 0.08);
+  --wp--preset--color--primary: #202020;
+  /* Dark gray chip */
+  --accent-text-blue: #F0F0F0;
+  /* White accent on dark */
+  --accent-warm: #F0F0F0;
+  --accent-warm-light: #383838;
+  /* Dark gray chip */
+  --pulse-glow-color: rgba(255, 255, 255, 0.10);
+  --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.55);
 }
 
 /* ==========================================================================
@@ -73,7 +73,7 @@
    Content sits above via z-index: 1 on workspace-page
    ========================================================================== */
 
-/* Indigo glow — top-right */
+/* No colour glows — clean B&W, depth comes from typography */
 body::before {
   content: '';
   position: fixed;
@@ -83,22 +83,18 @@ body::before {
   height: 700px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(72, 69, 168, 0.11) 0%,
-    rgba(72, 69, 168, 0.04) 42%,
-    transparent 68%);
+    rgba(0, 0, 0, 0.025) 0%,
+    transparent 60%);
   pointer-events: none;
   z-index: 0;
-  transition: background 0.4s ease;
 }
 
 [data-theme="dark"] body::before {
   background: radial-gradient(ellipse at center,
-    rgba(140, 138, 218, 0.16) 0%,
-    rgba(140, 138, 218, 0.06) 42%,
-    transparent 68%);
+    rgba(255, 255, 255, 0.025) 0%,
+    transparent 60%);
 }
 
-/* Warm sand glow — bottom-left */
 body::after {
   content: '';
   position: fixed;
@@ -107,20 +103,13 @@ body::after {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center,
-    rgba(200, 170, 100, 0.10) 0%,
-    rgba(200, 170, 100, 0.04) 45%,
-    transparent 68%);
+  background: transparent;
   pointer-events: none;
   z-index: 0;
-  transition: background 0.4s ease;
 }
 
 [data-theme="dark"] body::after {
-  background: radial-gradient(ellipse at center,
-    rgba(80, 60, 160, 0.28) 0%,
-    rgba(80, 60, 160, 0.09) 45%,
-    transparent 68%);
+  background: transparent;
 }
 
 html {
@@ -1388,11 +1377,11 @@ body {
    ═══════════════════════════════════════════════════ */
 .directory-content {
   padding-left: 2rem;
-  border-left: 1.5px solid rgba(72, 69, 168, 0.18);
+  border-left: 1.5px solid rgba(0, 0, 0, 0.12);
 }
 
 [data-theme="dark"] .directory-content {
-  border-left-color: rgba(140, 138, 218, 0.18);
+  border-left-color: rgba(255, 255, 255, 0.12);
 }
 
 
@@ -1432,7 +1421,8 @@ body {
    One colour split on the wordmark is enough brand
    flavour in the footer. Doesn't need anything else.
    ═══════════════════════════════════════════════════ */
+/* Brand split: second word in mid-gray for typographic distinction */
 .brand-logo span {
-  color: var(--accent-warm);
+  color: var(--wp--preset--color--foreground-2);
 }
 
