@@ -8,52 +8,52 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-name: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
-  /* Color Palette — Forest & Linen */
-  --wp--preset--color--background-1: #F3F0E8;
-  /* Warm linen — earthy, grounded */
-  --wp--preset--color--background-2: #FAFAF5;
-  /* Soft white card */
-  --wp--preset--color--foreground-1: #182014;
-  /* Deep forest charcoal */
-  --wp--preset--color--foreground-2: #4A5A42;
-  /* Olive green — warm secondary */
-  --wp--preset--color--border: rgba(50, 80, 45, 0.12);
-  /* Forest green tint border */
-  --wp--preset--color--primary: #E2ECDA;
-  /* Pale sage chip */
-  --accent-text-blue: #3D7045;
-  /* Deep forest green accent */
-  --accent-warm: #3D7045;
-  --accent-warm-light: #A8C898;
-  /* Soft sage highlight */
-  --pulse-glow-color: rgba(61, 112, 69, 0.25);
+  /* Color Palette — Indigo & Sand */
+  --wp--preset--color--background-1: #F2EFE8;
+  /* Warm ivory sand */
+  --wp--preset--color--background-2: #FBF9F4;
+  /* Clean sand-white card */
+  --wp--preset--color--foreground-1: #1C1840;
+  /* Deep indigo-black */
+  --wp--preset--color--foreground-2: #4C4878;
+  /* Muted indigo slate */
+  --wp--preset--color--border: rgba(60, 55, 120, 0.10);
+  /* Indigo tint border */
+  --wp--preset--color--primary: #E6E4F4;
+  /* Soft lavender chip */
+  --accent-text-blue: #4845A8;
+  /* Rich indigo accent */
+  --accent-warm: #4845A8;
+  --accent-warm-light: #AAA8E0;
+  /* Soft lavender-blue */
+  --pulse-glow-color: rgba(72, 69, 168, 0.25);
 
   /* Spacings & Layout */
   --content-width: 680px;
   --transition-normal: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.15s ease-in-out;
-  --shadow-box: 0px 48px 80px -16px rgba(20, 50, 20, 0.09);
+  --shadow-box: 0px 48px 80px -16px rgba(30, 25, 80, 0.09);
 }
 
 [data-theme="dark"] {
-  --wp--preset--color--background-1: #090E08;
-  /* Deep forest night — rich, immersive */
-  --wp--preset--color--background-2: #111A0D;
-  /* Dark forest card surface */
-  --wp--preset--color--foreground-1: #DFF0D0;
-  /* Warm sage-white — easy on the eye */
-  --wp--preset--color--foreground-2: #789870;
-  /* Muted forest green */
-  --wp--preset--color--border: rgba(100, 160, 90, 0.10);
-  --wp--preset--color--primary: #131C0F;
-  /* Dark sage chip */
-  --accent-text-blue: #8ACC78;
-  /* Leaf green — bright on dark forest */
-  --accent-warm: #8ACC78;
-  --accent-warm-light: #183018;
-  /* Dark moss chip */
-  --pulse-glow-color: rgba(138, 204, 120, 0.30);
-  --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.6);
+  --wp--preset--color--background-1: #0C0B1A;
+  /* Deep indigo night — rich, immersive */
+  --wp--preset--color--background-2: #141228;
+  /* Dark indigo card surface */
+  --wp--preset--color--foreground-1: #EAE8F8;
+  /* Cool lavender-white */
+  --wp--preset--color--foreground-2: #7875B0;
+  /* Muted medium indigo */
+  --wp--preset--color--border: rgba(120, 115, 200, 0.10);
+  --wp--preset--color--primary: #131128;
+  /* Dark indigo chip */
+  --accent-text-blue: #8C8ADA;
+  /* Bright soft indigo — glows on dark */
+  --accent-warm: #8C8ADA;
+  --accent-warm-light: #1E1B48;
+  /* Dark indigo chip */
+  --pulse-glow-color: rgba(140, 138, 218, 0.30);
+  --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.60);
 }
 
 /* ==========================================================================
@@ -73,18 +73,18 @@
    Content sits above via z-index: 1 on workspace-page
    ========================================================================== */
 
-/* Forest green glow — top-right */
+/* Indigo glow — top-right */
 body::before {
   content: '';
   position: fixed;
   top: -160px;
   right: -200px;
-  width: 680px;
-  height: 680px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(61, 112, 69, 0.10) 0%,
-    rgba(61, 112, 69, 0.04) 42%,
+    rgba(72, 69, 168, 0.11) 0%,
+    rgba(72, 69, 168, 0.04) 42%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -93,23 +93,23 @@ body::before {
 
 [data-theme="dark"] body::before {
   background: radial-gradient(ellipse at center,
-    rgba(138, 204, 120, 0.13) 0%,
-    rgba(138, 204, 120, 0.05) 42%,
+    rgba(140, 138, 218, 0.16) 0%,
+    rgba(140, 138, 218, 0.06) 42%,
     transparent 68%);
 }
 
-/* Warm amber glow — bottom-left (earthy contrast) */
+/* Warm sand glow — bottom-left */
 body::after {
   content: '';
   position: fixed;
   bottom: -140px;
   left: -180px;
-  width: 580px;
-  height: 580px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(180, 140, 70, 0.09) 0%,
-    rgba(180, 140, 70, 0.04) 45%,
+    rgba(200, 170, 100, 0.10) 0%,
+    rgba(200, 170, 100, 0.04) 45%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -118,8 +118,8 @@ body::after {
 
 [data-theme="dark"] body::after {
   background: radial-gradient(ellipse at center,
-    rgba(100, 70, 20, 0.22) 0%,
-    rgba(100, 70, 20, 0.07) 45%,
+    rgba(80, 60, 160, 0.28) 0%,
+    rgba(80, 60, 160, 0.09) 45%,
     transparent 68%);
 }
 
@@ -1388,11 +1388,11 @@ body {
    ═══════════════════════════════════════════════════ */
 .directory-content {
   padding-left: 2rem;
-  border-left: 1.5px solid rgba(61, 112, 69, 0.22);
+  border-left: 1.5px solid rgba(72, 69, 168, 0.18);
 }
 
 [data-theme="dark"] .directory-content {
-  border-left-color: rgba(138, 204, 120, 0.18);
+  border-left-color: rgba(140, 138, 218, 0.18);
 }
 
 
