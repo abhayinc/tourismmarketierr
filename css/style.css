@@ -21,12 +21,12 @@
   /* Navy tint divider */
   --wp--preset--color--primary: #E4EBF4;
   /* Light blue chip */
-  --accent-text-blue: #B8902A;
-  /* Warm gold accent */
-  --accent-warm: #B8902A;
-  --accent-warm-light: #E2C870;
-  /* Golden honey light */
-  --pulse-glow-color: rgba(184, 144, 42, 0.28);
+  --accent-text-blue: #1A6E88;
+  /* Ocean teal — fits the navy bg naturally */
+  --accent-warm: #1A6E88;
+  --accent-warm-light: #9CCADE;
+  /* Sky blue light */
+  --pulse-glow-color: rgba(26, 110, 136, 0.25);
 
   /* Spacings & Layout */
   --content-width: 680px;
@@ -47,13 +47,12 @@
   --wp--preset--color--border: rgba(100, 150, 210, 0.10);
   --wp--preset--color--primary: #0D1828;
   /* Deep navy chip */
-  --accent-text-blue: #E0C860;
-  /* Warm gold accent text */
-  --accent-warm: #D4A838;
-  /* Bright gold — glows on dark navy */
-  --accent-warm-light: #382C08;
-  /* Muted dark gold */
-  --pulse-glow-color: rgba(212, 168, 56, 0.35);
+  --accent-text-blue: #5AB8D4;
+  /* Bright teal — pops on deep navy */
+  --accent-warm: #5AB8D4;
+  --accent-warm-light: #0E2E3A;
+  /* Dark teal chip */
+  --pulse-glow-color: rgba(90, 184, 212, 0.32);
   --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.6);
 }
 
@@ -74,7 +73,7 @@
    Content sits above via z-index: 1 on workspace-page
    ========================================================================== */
 
-/* Golden glow — top-right corner */
+/* Teal glow — top-right corner */
 body::before {
   content: '';
   position: fixed;
@@ -84,8 +83,8 @@ body::before {
   height: 680px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(184, 144, 42, 0.12) 0%,
-    rgba(184, 144, 42, 0.05) 42%,
+    rgba(26, 110, 136, 0.10) 0%,
+    rgba(26, 110, 136, 0.04) 42%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -94,8 +93,8 @@ body::before {
 
 [data-theme="dark"] body::before {
   background: radial-gradient(ellipse at center,
-    rgba(212, 168, 56, 0.16) 0%,
-    rgba(212, 168, 56, 0.06) 42%,
+    rgba(90, 184, 212, 0.14) 0%,
+    rgba(90, 184, 212, 0.05) 42%,
     transparent 68%);
 }
 
@@ -1368,19 +1367,17 @@ body {
 
 
 /* ═══════════════════════════════════════════════════
-   MOVE 2  —  Services section: warm card tint
-   The "How I Help" block sits on a barely-there
-   warm wash — enough to feel differentiated, not colored.
+   MOVE 2  —  Services section: no box, just spacing
    ═══════════════════════════════════════════════════ */
 .workspace-section:not(.contact-section) {
-  background: rgba(181, 98, 42, 0.032);
-  border-radius: 14px;
-  padding: 3.2rem 2.4rem;
-  margin: 6rem -2.4rem;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 6rem 0;
 }
 
 [data-theme="dark"] .workspace-section:not(.contact-section) {
-  background: rgba(212, 136, 74, 0.055);
+  background: none;
 }
 
 
@@ -1391,11 +1388,11 @@ body {
    ═══════════════════════════════════════════════════ */
 .directory-content {
   padding-left: 2rem;
-  border-left: 1.5px solid rgba(181, 98, 42, 0.18);
+  border-left: 1.5px solid rgba(26, 110, 136, 0.20);
 }
 
 [data-theme="dark"] .directory-content {
-  border-left-color: rgba(212, 136, 74, 0.16);
+  border-left-color: rgba(90, 184, 212, 0.18);
 }
 
 
