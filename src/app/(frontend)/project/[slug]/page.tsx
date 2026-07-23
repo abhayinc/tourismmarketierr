@@ -100,7 +100,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs sm:text-sm font-medium border-t border-zinc-100 dark:border-zinc-800 pt-8">
+        <div className="grid grid-cols-2 gap-6 text-xs sm:text-sm font-medium border-t border-zinc-100 dark:border-zinc-800 pt-8">
           <div className="space-y-1.5">
             <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Client</span>
             <span className="block text-zinc-900 dark:text-zinc-100">{project.client}</span>
@@ -108,10 +108,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <div className="space-y-1.5">
             <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Deliverables</span>
             <span className="block text-zinc-900 dark:text-zinc-100">{project.deliverables}</span>
-          </div>
-          <div className="space-y-1.5">
-            <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Year</span>
-            <span className="block text-zinc-900 dark:text-zinc-100">{project.year}</span>
           </div>
         </div>
       </section>

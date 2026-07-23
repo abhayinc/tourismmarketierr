@@ -56,11 +56,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'year',
-      title: 'Year',
-      type: 'string',
-    }),
-    defineField({
       name: 'story',
       title: 'The Story / Brief',
       type: 'array',
