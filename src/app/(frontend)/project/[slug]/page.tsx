@@ -140,8 +140,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <section className="space-y-6 sm:space-y-8">
         {project.gallery ? (
           project.gallery.map((img: any, i: number) => (
-             <div key={i} className="relative rounded-none overflow-hidden bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 w-full aspect-video shadow-sm">
-                <img src={urlForImage(img).url()} alt={`Gallery ${i}`} className="absolute inset-0 w-full h-full object-cover" />
+             <div key={i} className="flex flex-col gap-3">
+               <div className="relative rounded-none overflow-hidden bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 w-full aspect-video shadow-sm">
+                  <img src={urlForImage(img).url()} alt={`Gallery ${i}`} className="absolute inset-0 w-full h-full object-cover" />
+               </div>
+               {img.subtitle && (
+                 <p className="text-xs text-zinc-500 dark:text-zinc-400 text-center tracking-wide">{img.subtitle}</p>
+               )}
              </div>
           ))
         ) : (

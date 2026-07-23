@@ -76,6 +76,13 @@ export default defineType({
           options: {
             hotspot: true,
           },
+          fields: [
+            {
+              name: 'subtitle',
+              type: 'string',
+              title: 'Subtitle / Caption',
+            },
+          ],
         },
       ],
     }),
