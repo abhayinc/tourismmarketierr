@@ -78,7 +78,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   const moreProjects = sanityMoreProjects || fallbackMoreProjects
 
-  const coverUrl = project.coverImage ? urlForImage(project.coverImage).url() : project.fallbackCoverUrl
+  const coverUrl = project.heroImage
+    ? urlForImage(project.heroImage).url()
+    : project.coverImage 
+      ? urlForImage(project.coverImage).url() 
+      : project.fallbackCoverUrl
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12 sm:py-24 space-y-20 sm:space-y-28">

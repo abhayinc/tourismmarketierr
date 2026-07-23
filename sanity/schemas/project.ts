@@ -31,6 +31,15 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'heroImage',
+      title: 'Hero Image (Project Page)',
+      type: 'image',
+      description: 'This is the large image displayed at the top of the project page.',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'description',
       title: 'Short Description',
       type: 'text',
