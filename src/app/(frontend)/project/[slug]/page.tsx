@@ -95,14 +95,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-xs sm:text-sm font-medium border-t border-zinc-100 dark:border-zinc-800 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs sm:text-sm font-medium border-t border-zinc-100 dark:border-zinc-800 pt-8">
           <div className="space-y-1.5">
             <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Client</span>
             <span className="block text-zinc-900 dark:text-zinc-100">{project.client}</span>
-          </div>
-          <div className="space-y-1.5">
-            <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Role</span>
-            <span className="block text-zinc-900 dark:text-zinc-100">{project.role}</span>
           </div>
           <div className="space-y-1.5">
             <span className="block uppercase tracking-widest text-zinc-400 dark:text-zinc-500 text-[10px]">Deliverables</span>
@@ -132,32 +128,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
         <div className="md:col-span-8 space-y-4 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
           {project.story ? <p>Render rich text here...</p> : project.storyFallback}
-        </div>
-      </section>
-
-      {/* DESIGN ELEMENTS */}
-      <section className="space-y-6">
-        <div className="flex items-center gap-3 mb-8">
-          <h2 className="text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Design System</h2>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <span className="text-[10px] font-medium tracking-widest uppercase text-zinc-400 dark:text-zinc-500">Color Palette</span>
-            <div className="flex gap-3">
-              {project.colors?.map((color: string, i: number) => (
-                <div key={i} className="w-12 h-12 rounded-none border border-zinc-200 dark:border-zinc-700 shadow-sm" style={{ backgroundColor: color }}></div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="space-y-4">
-            <span className="text-[10px] font-medium tracking-widest uppercase text-zinc-400 dark:text-zinc-500">Typography</span>
-            <div className="p-4 border border-zinc-200/50 dark:border-zinc-800/50 bg-zinc-50 dark:bg-zinc-800/20">
-              <div className="font-sans text-xl text-zinc-900 dark:text-zinc-100">Plus Jakarta Sans</div>
-              <div className="font-sans text-xs text-zinc-500 dark:text-zinc-400 mt-2">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
-            </div>
-          </div>
         </div>
       </section>
 

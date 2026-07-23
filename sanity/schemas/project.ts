@@ -42,11 +42,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'role',
-      title: 'Role',
-      type: 'string',
-    }),
-    defineField({
       name: 'deliverables',
       title: 'Deliverables',
       type: 'string',
@@ -61,13 +56,6 @@ export default defineType({
       title: 'The Story / Brief',
       type: 'array',
       of: [{ type: 'block' }],
-    }),
-    defineField({
-      name: 'colors',
-      title: 'Color Palette',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: 'Enter hex codes (e.g., #FFFFFF)',
     }),
     defineField({
       name: 'gallery',
