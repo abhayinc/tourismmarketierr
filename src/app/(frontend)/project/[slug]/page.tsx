@@ -31,9 +31,10 @@ async function getMoreProjects(slug: string) {
   }
 }
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const sanityProject = await getProject(params.slug)
-  const sanityMoreProjects = await getMoreProjects(params.slug)
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const sanityProject = await getProject(slug)
+  const sanityMoreProjects = await getMoreProjects(slug)
 
   // Fallback data
   const fallbackProject = {
