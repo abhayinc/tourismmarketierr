@@ -141,7 +141,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   <img src={urlForImage(img).url()} alt={`Gallery ${i}`} className="absolute inset-0 w-full h-full object-cover" />
                </div>
                {img.subtitle && (
-                 <p className="text-xs text-zinc-500 dark:text-zinc-400 text-center tracking-wide">{img.subtitle}</p>
+                 <p className="text-xs text-zinc-500 dark:text-zinc-400 text-left tracking-wide">{img.subtitle}</p>
                )}
              </div>
           ))
