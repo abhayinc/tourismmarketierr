@@ -4,6 +4,7 @@ import { client } from '../../../../../sanity/lib/client'
 import { urlForImage } from '../../../../../sanity/lib/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { PortableText } from '@portabletext/react'
 
 export const revalidate = 60
 
@@ -130,8 +131,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <path d="M12 11.5 C12 10, 13.5 10, 14 11 C14.5 12, 13.5 13.5, 12 13.5 C10 13.5, 9.5 11.5, 10.5 9.5 C11.5 7.5, 15 7.5, 16 9.5 C17 11.5, 15.5 16, 12 16 C8.5 16, 7.5 13, 8 10 C8.5 7, 12 5.5, 14.5 6 C17 6.5, 19.5 10, 18.5 13.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
-        <div className="md:col-span-8 space-y-4 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-          {project.story ? <p>Render rich text here...</p> : project.storyFallback}
+        <div className="md:col-span-8 space-y-4 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-light [&>p]:mb-4 [&>h3]:text-lg [&>h3]:font-medium [&>h3]:text-zinc-900 [&>h3]:dark:text-zinc-100 [&>h3]:mt-6 [&>h3]:mb-3 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 [&>ul>li]:mb-2">
+          {project.story ? <PortableText value={project.story} /> : project.storyFallback}
         </div>
       </section>
 
